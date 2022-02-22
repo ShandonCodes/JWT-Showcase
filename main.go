@@ -28,7 +28,7 @@ func main() {
 		email := c.FormValue("email")
 		password := c.FormValue("password")
 
-		if email != "test@test.io" || password != "password" {
+		if email != "test@test.io" && password != "password" {
 			return c.JSON(http.StatusBadRequest, echo.Map{"error": "User does not exists or is disabled"})
 		}
 
